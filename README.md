@@ -1,4 +1,4 @@
-# echo_sender
+# Echo Sender
 Simple python script to send a file over serial to a UART shell.
 
 # Example
