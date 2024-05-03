@@ -46,7 +46,7 @@ with open(args.input, "rb") as infile:
             echo_bytes = ""
             for octet in data:
                 echo_bytes += f"\\x{octet:02x}"
-            shell_cmd = f"echo -ne \"{echo_bytes}\" >> {args.remote_dest}\n"
+            shell_cmd = f"echo -ne \"{echo_bytes}\" >> {args.remote_dest}"
             tmux_cmd = f"send-keys '{shell_cmd}'\nsend-keys Enter\n"
             outfile.write(tmux_cmd)
             data = infile.read(args.chunk_size)
